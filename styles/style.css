@@ -21,10 +21,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
 } 
 
 .card-width{ 
   inline-size: var(--card-width);
+  max-inline-size: 100%;
 }
 
 .header { 
@@ -41,6 +44,7 @@
   padding: calc(clamp(7.625rem, 7.0481rem + 2.4615vw, 8.125rem) - 2px) 
            clamp(1rem, -6.6803rem + 32.7692vw, 7.65625rem);
   border: 2px solid var(--border-color);
+  max-inline-size: 100%;
 }
 
 .header__title {
@@ -58,6 +62,7 @@
   flex-direction: column;
   margin-block-end: 100px;
   gap: 49px;
+  inline-size: var(--card-width);
 }
 
 .card {
@@ -151,19 +156,22 @@
   justify-content: flex-end;
   align-items: center;
   block-size: 38px;
-  gap: 10px;
+  gap: 7px;
 }
 
 .card__icon-button {
   background-color: transparent;
-  border: none;
-  transition: outline 0.3s ease;
-  box-shadow: inset 0 0 0 2px transparent;
+  border: 1px solid transparent; 
+  transition: border-color 0.3s ease; 
   outline: none; 
   inline-size: 38px;
-  padding: 0;
-  block-size: 38px;
+  padding: 0px;
+  block-size: 35px;
   cursor: pointer;
+  box-sizing: border-box; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__icon-button:focus {
@@ -183,7 +191,7 @@
 }
 
 .core {
-  transition: fill 0.3s linear 0.03sч;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .sparks {
@@ -242,10 +250,11 @@
 }
 
 .button__text {
-  font-family: var(--accent-font-family, sans-serif), sans-serif;
+  font-family: var(--accent-font-family), sans-serif;
   font-size: 14px;
   line-height: 90%;
   color: var(--bg-color, #fff);
+  mix-blend-mode: difference;
 }
 
 button .button__text {
@@ -254,11 +263,12 @@ button .button__text {
 }
 
 .button {
-  transition: box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  background-color: var(--bg-color);
-  cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    cursor: pointer;
+
 }
 
 .button:focus {
@@ -272,12 +282,11 @@ button .button__text {
 .button::after {
   content: "";
   position: absolute;
-  inline-size: 100%;
-  block-size: 100%;
   inset: 0;
-  background-color: var(--accent-color);
+  background-color: #000;
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
+  z-index: 0;
 }
 
 .button:hover::after {
@@ -290,7 +299,7 @@ button .button__text {
   mix-blend-mode: difference;
 }
 
-.button_disketa{
+.button_disketa {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -298,12 +307,24 @@ button .button__text {
   inline-size: fit-content;
   align-self: center;
   border: 2px solid var(--border-color);
+  isolation: isolate; 
 }
+
+.button_disketa::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000; 
+  z-index: -1; 
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+} 
 
 .button_disketa svg {
   inline-size: 28px;
   block-size: 28px;
-  color: var(--bg-color);
+  fill: #fff;
+  color: #fff;
 }
 
 .dialog-id[open] {
@@ -318,7 +339,6 @@ button .button__text {
   line-height: 150%;
   text-transform: uppercase;
   inline-size: 234px;
-  color: var(--accent-color)
 }
 
 .dialog-id[open] svg {
@@ -360,4 +380,10 @@ button .button__text {
     max-width: 28px;
   }
 
+}
+
+.mix_difference {
+  fill: white;
+  color: #fff;
+  mix-blend-mode: difference;
 }

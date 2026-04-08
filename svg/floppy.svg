@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg>
 
-<symbol id="disketa">
+<symbol 
+xmlns="http://www.w3.org/2000/svg"  
+fill="currentColor"
+id="disketa">
 
-<path fill="#000" d="M0 0h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 
+<path fill="currentColor" d="M0 0h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 
 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zm0 3h3v3H0zM33 0v3h-3V0zm-3 0v3h-3V0zm-3 0v3h-3V0zm-3 
 0v3h-3V0zm-3 0v3h-3V0zm-3 0v3h-3V0zm-3 0v3h-3V0zm-3 0v3H9V0zM9 0v3H6V0zM6 0v3H3V0zm30 3v3h-3V3zM9 
 6v3H6V6zm0-3v3H6V3zm0 6v3H6V9zm21-3v3h-3V6zm0-3v3h-3V3zm0 6v3h-3V9zm-6-3v3h-3V6zm0-3v3h-3V3zm0 

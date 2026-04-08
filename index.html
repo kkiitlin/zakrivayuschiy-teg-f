@@ -424,15 +424,17 @@
 
       <button type="button" class="button_disketa button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id"> 
        <svg
-        class="button__size"
+        class="button__size mix_difference"
         viewBox="0 0 39 39"
         width="39"
-        height="39">
+        height="39" >
         <use href="./svg/floppy.svg#disketa"></use>
         </svg>
 
         <span class="button__text">Сохранить на память</span>
       </button>
+
+
       <dialog class="dialog-id" id="dialog-id">
         <div class="dialog__container">
           <svg
@@ -448,8 +450,8 @@
         <button type="button" class="dialog__button-close button" onclick="window['dialog-id'].close()">
           <span class="button__text">ок</span>
       </button>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
-`
